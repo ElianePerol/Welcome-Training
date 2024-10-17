@@ -10,8 +10,7 @@
 
   <body class="bg-light d-flex align-items-center vh-100">
 
-
-    <div class="container">
+  <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="card bg-white border-0 shadow p-4 rounded">
