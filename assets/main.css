@@ -1,0 +1,47 @@
+.form-control:focus {
+    border-color: #737373 !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(115, 115, 115, 0.6) !important;
+}
+
+.btn {
+    background-color: #737373 !important;
+    color: white !important;
+}
+
+.nav-link:hover, .btn:hover {
+    background-color: #545454 !important;
+    color: white !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+th, h5, a {
+    color: #737373 !important;
+}
+
+.schedule-header, header, footer {
+    background-color: #737373;
+}
+
+.logo-dark  {
+    max-width: 9%;
+}
+
+.register {
+    height: 450px;
+}
+
+.student-list {
+    max-height: 350px;
+}
+
+.custom-checkbox .form-check-input:checked {
+    background-color: #737373; 
+    border-color: #737373;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(115, 115, 115, 0.6);
+  }
+
+  @media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+}
