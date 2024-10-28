@@ -21,8 +21,9 @@
             <nav class="d-flex align-items-center gap-3">
                 <a href="admin.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Accueil</a>
                 <a href="create-user.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Nouvel utilisateur</a>
-                <a href="class-crud.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
-                <a href="teacher-list.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Enseignants</a>
+                <a href="create-class.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
+                <a href="list-student.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Étudiants</a>
+                <a href="list-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Enseignants</a>
                 <a href="planning.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Plannings</a>
                 <a href="#" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Profil</a>
                 <a href="#" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">

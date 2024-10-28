@@ -1,5 +1,7 @@
 <?php 
-include_once "common/header-admin.php";
+  include_once "common/header-admin.php";
+  include_once "database/db-connexion.php";
+  include_once "database/db-create-user.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -10,17 +12,17 @@ include_once "common/header-admin.php";
 
             <h3 class="text-center text-secondary mb-4">Créer un nouvel utilisateur</h3>
 
-            <form action="/create-user" method="post">
+            <form action="create-user.php" method="POST">
               <!-- Nom -->
               <div class="mb-3">
                 <label for="nom" class="form-label">Nom :</label>
-                <input type="text" class="form-control" id="nom" name="nom" placeholder="Entrez le nom" required>
+                <input type="text" class="form-control" id="nom" name="first_name" placeholder="Entrez le nom" required>
               </div>
 
               <!-- Prénom -->
               <div class="mb-3">
                 <label for="prenom" class="form-label">Prénom :</label>
-                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Entrez le prénom" required>
+                <input type="text" class="form-control" id="prenom" name="surname" placeholder="Entrez le prénom" required>
               </div>
 
               <!-- Email -->
@@ -31,8 +33,8 @@ include_once "common/header-admin.php";
 
               <!-- Mot de passe -->
               <div class="mb-3">
-                <label for="password" class="form-label">Mot de passe :</label>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Entrez un mot de passe" required>
+                <label for="password" class="form-label">Mot de passe provisoire:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Entrez un mot de passe provisoire" required>
               </div>
 
               <!-- Rôle -->
@@ -49,8 +51,15 @@ include_once "common/header-admin.php";
               <!-- Classe -->
               <div class="mb-4">
                 <label for="classe" class="form-label">Classe :</label>
-                <input type="text" class="form-control" id="classe" name="classe" placeholder="Ex: Classe A, B, C" required>
-              </div>
+                <select class="form-select mb-4" id="class_id" name="class_id">
+
+                  <?php foreach($classes as $c): ?>
+
+                     <option value=<?php echo($c["id"]); ?>> <?php  echo($c["name"]); ?> </option>
+    
+                  <?php endforeach; ?>
+
+                </select>
 
               <!-- Submit Button -->
               <div class="d-flex justify-content-center">
