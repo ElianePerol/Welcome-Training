@@ -7,6 +7,12 @@ function pwdHash($pwd) {
     return password_hash($pwd, PASSWORD_BCRYPT, $options);
 }
 
+// Retrieves classes from the table for use in the classes select dropdown
+$sql = "SELECT * FROM `class`";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$classes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
 // Saves the create-user form inputs in the db
 if(count($_POST) > 0) {
     // Checks is the form is submitted
@@ -19,10 +25,14 @@ if(count($_POST) > 0) {
     $password = pwdHash($_POST['password']); // hash password
     $role = $_POST['role'];
     $class = $_POST['class_id'];
-
+    
+    if (empty($class)) {
+        $class = NULL;
+    }
+    
     // Prepares the SQL statement
     $sql = "INSERT INTO user (surname, first_name, email, password, role, class_id) 
-                VALUES (:surname, :first_name, :email, :password, :role, :class)";
+            VALUES (:surname, :first_name, :email, :password, :role, :class)";
 
     // Executes the prepared statement
     $stmt = $pdo->prepare($sql);
@@ -36,8 +46,4 @@ if(count($_POST) > 0) {
 
 }
 
-$sql = "SELECT * FROM `class`";
-$stmt = $pdo->prepare($sql);
-$stmt->execute();
-$classes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>

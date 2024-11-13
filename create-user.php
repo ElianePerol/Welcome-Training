@@ -6,13 +6,15 @@
 
 <main class="bg-light d-flex align-items-center vh-100">
     <div class="container">
+
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
           <div class="card bg-white border-0 shadow p-4 rounded">
 
-            <h3 class="text-center text-secondary mb-4">Créer un nouvel utilisateur</h3>
+            <h3 class="text-center text-secondary mb-4">Créer un utilisateur</h3>
 
             <form action="create-user.php" method="POST">
+
               <!-- Nom -->
               <div class="mb-3">
                 <label for="nom" class="form-label">Nom :</label>
@@ -33,7 +35,7 @@
 
               <!-- Mot de passe -->
               <div class="mb-3">
-                <label for="password" class="form-label">Mot de passe provisoire:</label>
+                <label for="password" class="form-label">Mot de passe provisoire :</label>
                 <input type="password" class="form-control" id="password" name="password" placeholder="Entrez un mot de passe provisoire" required>
               </div>
 
@@ -52,14 +54,14 @@
               <div class="mb-4">
                 <label for="classe" class="form-label">Classe :</label>
                 <select class="form-select mb-4" id="class_id" name="class_id">
-
-                  <?php foreach($classes as $c): ?>
-
-                     <option value=<?php echo($c["id"]); ?>> <?php  echo($c["name"]); ?> </option>
-    
-                  <?php endforeach; ?>
-
+                    <option value=""></option>
+                    <?php foreach($classes as $c): ?>
+                      <option value=<?php echo($c["id"]); ?>> 
+                        <?php  echo($c["name"]); ?> 
+                      </option>
+                    <?php endforeach; ?>
                 </select>
+              </div>
 
               <!-- Submit Button -->
               <div class="d-flex justify-content-center">

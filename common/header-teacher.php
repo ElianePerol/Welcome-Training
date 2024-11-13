@@ -1,3 +1,5 @@
+<?php include_once "session-start.php" ?>
+
 <!doctype html>
 <html lang="fr">
   <head>
@@ -21,9 +23,8 @@
             <nav class="d-flex align-items-center gap-3">
                 <a href="teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Accueil</a>
                 <a href="schedule-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Emploi du temps</a>
-                <a href="class-list.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
-                <a href="#" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Profil</a>
-                <a href="#" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
+                <a href="list-class-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
+                <a href="common/logout.php" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
                     <i class="fa-solid fa-power-off"></i>
                 </a>
             </nav>

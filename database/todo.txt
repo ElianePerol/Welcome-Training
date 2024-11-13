@@ -1,0 +1,18 @@
+
+Afficher nom et classe de l'utilisateur dans header : si classe NULL ne rien Afficher
+utiliser jointure dans $sql
+
+Isoler la fonction hashPwd dans un fichier pour ne pas la répéter
+
+Gérer erreur de mdp au login
+
+Ajouter une page a qui affiche la liste des étudiant par classe (ou une liste 
+    en dropdown ?)
+
+Page script_bdd.sql qui créer bdd (à exporter dans l'existante et remettre propre)
+
+Liste étudiants, liste enseignant, liste classes, liste matières : modifier, supprimer
+
+Signature
+
+Clean up comments
