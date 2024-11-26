@@ -2,11 +2,11 @@
   include_once "common/header-admin.php";
   include_once "database/db-connexion.php";
   include_once "database/db-create-schedule.php";
+  include_once "database/db-list-display.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
-    <div class="container">
-      
+    <div class="container">      
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
           <div class="card bg-white border-0 shadow p-4 rounded">
@@ -18,7 +18,7 @@
                 <!-- Matière -->
                 <div class="mb-3">
                     <label for="matiere" class="form-label">Matière :</label>
-                    <select class="form-select mb-4" id="subject_id" name="subject_id" required>
+                    <select class="form-control custom-select form-select mb-4" id="subject_id" name="subject_id" required>
                         <option value=""></option>
                         <?php foreach($subjects as $s): ?>
                             <option value=<?php echo($s["id"]); ?>> 
@@ -43,7 +43,7 @@
                 <!-- Durée -->
                 <div class="mb-3">
                     <label for="duree" class="form-label">Durée :</label>
-                    <select  class="form-select" name="duree" id="duree">
+                    <select  class="form-control custom-select form-select" name="duree" id="duree">
                         <option value=""></option>
                         <option value="1">1h</option>
                         <option value="2">2h</option>
@@ -55,7 +55,7 @@
                 <!-- Enseignant -->
                 <div class="mb-3">
                     <label for="enseignant" class="form-label">Enseignant :</label>
-                    <select class="form-select" id="enseignant" name="enseignant">
+                    <select class="form-control custom-select form-select" id="enseignant" name="enseignant">
                         <option value=""></option>
                         <?php foreach($enseignants as $e): ?>
                             <option value = <?php echo($e["id"]); ?>> 
@@ -68,11 +68,11 @@
                 <!-- Classe -->
                 <div class="mb-4">
                     <label for="classe" class="form-label">Classe :</label>
-                    <select class="form-select mb-4" id="class_id" name="class_id" required>
+                    <select class="form-control custom-select form-select mb-4" id="class_id" name="class_id" required>
                         <option value=""></option>
-                        <?php foreach($classes as $c): ?>
-                            <option value = <?php echo($c["id"]); ?>>
-                                    <?php  echo($c["name"]); ?>
+                        <?php foreach($classes as $class): ?>
+                            <option value = <?php echo($class["id"]); ?>>
+                                    <?php  echo($class["name"]); ?>
                             </option>
                         <?php endforeach; ?>
                     </select>
@@ -82,7 +82,8 @@
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn rounded-pill w-50">Créer le cours</button>
                 </div>
-                </form>
+                
+            </form>
 
           </div>
         </div>

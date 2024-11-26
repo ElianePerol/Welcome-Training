@@ -1,6 +1,6 @@
 <?php
-
 include_once "db-connexion.php";
+
 session_start();
 
 function pwdHash($pwd) {
@@ -16,7 +16,10 @@ function login($email, $pwd) {
 
     // Query to select user by his email in user table from db 
     // $pwd = pwdHash($pwd);
-    $sql = "SELECT * FROM `user` WHERE `email` = :email"; //add join
+    $sql = "SELECT u.*, c.name AS class_name 
+            FROM `user` u
+            LEFT JOIN class c ON u.class_id = c.id
+            WHERE u.email = :email";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
     $stmt->execute();
@@ -34,6 +37,7 @@ function login($email, $pwd) {
         $_SESSION['user_email'] = $result['email'];
         $_SESSION['user_first_name'] = $result['first_name'];
         $_SESSION['user_surname'] = $result['surname'];
+        $_SESSION['class_name'] = isset($result['class_name']) ? $result['class_name'] : 'No class assigned';
 
 
         // Redirects to the correct url based on user role

@@ -1,8 +1,12 @@
 
-Afficher nom et classe de l'utilisateur dans header : si classe NULL ne rien Afficher
-utiliser jointure dans $sql
+finir le cruddes classes et des plannings
+
 
 Isoler la fonction hashPwd dans un fichier pour ne pas la répéter
+
+Ranger les fichiers dans les répertoires appropriés
+
+Vérifier à la création d'un cours que la classe et le prof sont dispo sur ce créneau horaire
 
 Gérer erreur de mdp au login
 

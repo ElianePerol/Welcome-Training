@@ -11,13 +11,29 @@
     </head>
     
     <body class="vh-100">
+
         
         <header class="container-fluid py-1 position-fixed top-0 w-100">
             <div class="d-flex justify-content-between align-items-center">
                 
                 <div class="d-flex align-items-center gap-3">
                     <img src="assets/img/logo_dark.png" class="img-fluid logo-dark rounded-circle" alt="Logo Welcome Training">
-                    <h5 class="mb-0 text-white">Nom- Étudiant</h5>
+                    
+                <!-- Displays user's name -->
+
+                <h5 class="mb-0 text-white">
+                    <?php 
+                    // Check if session variables for the user's name are set
+                    if (isset($_SESSION['user_first_name']) && isset($_SESSION['user_surname'])) {
+                        // Display the user's first name and surname
+                        echo htmlspecialchars($_SESSION['user_first_name']) . ' ' . htmlspecialchars($_SESSION['user_surname']) . ' - Classe : ' . htmlspecialchars($_SESSION['class_name']);
+                    } else {
+                        // Fallback in case user info is not available (e.g. not logged in)
+                        echo 'Étudiant';
+                    }
+                    ?>
+                </h5>
+                
                 </div>
                 <?php include_once "session-start.php" ?>
 

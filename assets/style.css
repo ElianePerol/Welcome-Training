@@ -8,24 +8,19 @@
     color: white !important;
 }
 
-.nav-link:hover, .btn:hover, .create.card:hover {
+.nav-link:hover, .btn:hover, .beep:hover {
     background-color: #545454 !important;
     color: white !important;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 
-th, h5, a {
+th, a {
     color: #737373 !important;
 }
 
 .schedule-header, header, footer{
     background-color: #737373;
-}
-
-
-.create h5 {
-    color: white !important;
 }
 
 .logo-dark  {
@@ -40,7 +35,7 @@ th, h5, a {
     max-height: 350px;
 }
 
-.custom-checkbox .form-check-input:checked {
+.custom-checkbox .form-check-input:checked .custom-select:focus .custom-select:hover .form-select:focus {
     background-color: #737373; 
     border-color: #737373;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(115, 115, 115, 0.6);

@@ -42,8 +42,8 @@
               <!-- Rôle -->
               <div class="mb-3">
                 <label for="role" class="form-label">Rôle :</label>
-                <select class="form-select" id="role" name="role" required>
-                  <option value="" selected disabled>Choisir un rôle</option>
+                <select class="form-control custom-select form-select" id="role" name="role" required>
+                  <option value="" selected disabled></option>
                   <option value="etudiant">Étudiant</option>
                   <option value="enseignant">Enseignant</option>
                   <option value="administrateur">Administrateur</option>
@@ -53,11 +53,11 @@
               <!-- Classe -->
               <div class="mb-4">
                 <label for="classe" class="form-label">Classe :</label>
-                <select class="form-select mb-4" id="class_id" name="class_id">
+                <select class="form-control custom-select form-select mb-4" id="class_id" name="class_id">
                     <option value=""></option>
-                    <?php foreach($classes as $c): ?>
-                      <option value=<?php echo($c["id"]); ?>> 
-                        <?php  echo($c["name"]); ?> 
+                    <?php foreach($classes as $class): ?>
+                      <option value=<?php echo($class["id"]); ?>> 
+                        <?php  echo($class["name"]); ?> 
                       </option>
                     <?php endforeach; ?>
                 </select>
