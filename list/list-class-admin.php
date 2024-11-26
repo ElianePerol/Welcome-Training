@@ -1,9 +1,9 @@
 <?php 
-include_once "common/header-admin.php";
-include_once "database/db-connexion.php";
-include_once "database/db-update-class.php";
-include_once "database/db-delete-class.php";
-include_once "database/db-list-display.php";
+include_once "../common/header-admin.php";
+include_once "../database/db-connexion.php";
+include_once "../database/update/db-update-class.php";
+include_once "../database/delete/db-delete-class.php";
+include_once "../database/db-list-display.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -55,11 +55,11 @@ include_once "database/db-list-display.php";
                                             <td class="text-center">
                                                 <div class="d-flex justify-content-center">
                                                     <button type="submit" name="update-class" value="<?php echo $class['id']; ?>" class="btn btn-sm me-2"
-                                                            onclick="return confirm('Êtes-vous sûr de vouloir modifier cette matière ?')">
+                                                            onclick="return confirm('Êtes-vous sûr de vouloir modifier cette classe ?')">
                                                             <i class="fa-regular fa-floppy-disk"></i> Modifier
                                                     </button>
                                                     <button type="submit" name="delete-class" value="<?php echo $class['id']; ?>" class="btn btn-sm"
-                                                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette matière ?')">
+                                                            onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette classe ?')">
                                                             <i class="fa-solid fa-trash"></i> Supprimer
                                                     </button>
                                                 </div>
@@ -77,5 +77,5 @@ include_once "database/db-list-display.php";
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

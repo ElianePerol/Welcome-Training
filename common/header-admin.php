@@ -9,7 +9,7 @@ include_once "session-start.php";
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome training - Administrateur</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="../assets/style.css">
 </head>
 
 <body class="vh-100">
@@ -18,7 +18,7 @@ include_once "session-start.php";
         <div class="d-flex justify-content-between align-items-center">
 
             <div class="d-flex align-items-center gap-3">
-                <img src="assets/img/logo_dark.png" class="img-fluid logo-dark rounded-circle" alt="Logo Welcome Training">
+                <img src="../assets/img/logo_dark.png" class="img-fluid logo-dark rounded-circle" alt="Logo Welcome Training">
 
                 <!-- Displays user's name -->
                 <h5 class="mb-0 text-white">
@@ -37,13 +37,13 @@ include_once "session-start.php";
             </div>
 
             <nav class="d-flex align-items-center gap-3">
-                <a href="admin.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Tableau de bord</a>
-                <a href="list-student.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Étudiants</a>
-                <a href="list-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Enseignants</a>
-                <a href="list-class-admin.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
-                <a href="list-subject.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Matières</a>
-                <a href="list-schedule.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Plannings</a>
-                <a href="./common/logout.php" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
+                <a href="../dashboard/admin.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Tableau de bord</a>
+                <a href="../list/list-student.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Étudiants</a>
+                <a href="../list/list-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Enseignants</a>
+                <a href="../list/list-class-admin.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
+                <a href="../list/list-subject.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Matières</a>
+                <a href="../list/list-schedule.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Plannings</a>
+                <a href="../common/logout.php" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
                     <i class="fa-solid fa-power-off"></i>
                 </a>
             </nav>

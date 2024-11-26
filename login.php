@@ -1,7 +1,6 @@
 <?php 
-
-    include_once "database/db-connexion.php";
-    include_once "database/db-login.php";
+include_once "database/db-connexion.php";
+include_once "database/db-login.php";
 ?>
 
 

@@ -1,5 +1,5 @@
 <?php 
-include_once "common/header-student.php";
+include_once "../common/header-student.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -80,5 +80,5 @@ include_once "common/header-student.php";
 </main>
     
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

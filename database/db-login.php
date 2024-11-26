@@ -43,11 +43,11 @@ function login($email, $pwd) {
         // Redirects to the correct url based on user role
         $redirect_url = "login.php"; // Default to login page if no role matches
         if ($result['role'] == 'etudiant') {
-            $redirect_url ="../student.php";
+            $redirect_url ="../dashboard/student.php";
         } elseif ($result['role'] == 'enseignant') {
-            $redirect_url ="../teacher.php";
+            $redirect_url ="../dashboard/teacher.php";
         } elseif ($result['role'] == 'administrateur') {
-            $redirect_url ="../admin.php";
+            $redirect_url ="../dashboard/admin.php";
         }
 
         // Redirects to the appropriate dashboard

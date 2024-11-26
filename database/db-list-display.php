@@ -47,8 +47,9 @@ $subjects = $stmt_subjects->fetchAll(PDO::FETCH_ASSOC);
 
 // Used in list-schedule.php
 // Retrieves from the database all elements necessary to display the schedules
-$sql_schedule = "SELECT s.id, c.name AS class_name, sub.name AS subject_name, 
-                u.first_name AS teacher_first_name, u.surname AS teacher_surname,
+$sql_schedule = "SELECT s.id, c.id AS class_id, c.name AS class_name, 
+                sub.id AS subject_id, sub.name AS subject_name, 
+                u.id AS teacher_id, u.first_name AS teacher_first_name, u.surname AS teacher_surname,
                 s.start_datetime, s.end_datetime
         FROM schedule s
         LEFT JOIN class c ON s.class_id = c.id

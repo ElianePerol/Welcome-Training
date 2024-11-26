@@ -5,7 +5,8 @@ if(count($_POST) > 0) {
     $first_name = $_POST['first_name'];
     $surname = $_POST['surname'];
     $email = $_POST['email'];
-    $id = $_POST['update-teacher'];
+    $class_id = $_POST['class_id'];
+    $id = $_POST['update-student'];
     
     // Handles empty fields
     if (empty($first_name)) {
@@ -22,7 +23,8 @@ if(count($_POST) > 0) {
     $sql = "UPDATE user SET
         first_name = :first_name,
         surname = :surname,
-        email = :email
+        email = :email,
+        class_id = :class_id
         WHERE id = :id";
 
     // Executes the prepared statement
@@ -30,9 +32,10 @@ if(count($_POST) > 0) {
     $stmt->bindParam(':first_name', $first_name, PDO::PARAM_STR);
     $stmt->bindParam(':surname', $surname, PDO::PARAM_STR);
     $stmt->bindParam(':email', $email, PDO::PARAM_STR);
+    $stmt->bindParam(':class_id', $class_id, PDO::PARAM_INT);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
 
-    // Execute the statement
+    // Executes the statement
     $stmt->execute();
 }
 

@@ -1,7 +1,7 @@
 <?php 
-  include_once "common/header-admin.php";
-  include_once "database/db-connexion.php";
-  include_once "database/db-create-user.php";
+  include_once "../common/header-admin.php";
+  include_once "../database/db-connexion.php";
+  include_once "../database/create/db-create-user.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -76,5 +76,5 @@
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

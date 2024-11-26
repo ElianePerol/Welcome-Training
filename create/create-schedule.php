@@ -1,8 +1,8 @@
 <?php 
-  include_once "common/header-admin.php";
-  include_once "database/db-connexion.php";
-  include_once "database/db-create-schedule.php";
-  include_once "database/db-list-display.php";
+  include_once "../common/header-admin.php";
+  include_once "../database/db-connexion.php";
+  include_once "../database/create/db-create-schedule.php";
+  include_once "../database/db-list-display.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -82,7 +82,7 @@
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn rounded-pill w-50">Créer le cours</button>
                 </div>
-                
+
             </form>
 
           </div>
@@ -92,5 +92,5 @@
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

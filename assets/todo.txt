@@ -1,0 +1,13 @@
+Passer on OOP
+
+Ranger les fichiers dans les répertoires appropriés
+
+Vérifier à la création d'un cours que la classe et le prof sont dispo sur ce créneau horaire
+
+Gérer erreur de mdp au login
+
+Page script_bdd.sql qui créer bdd (à exporter dans l'existante et remettre propre)
+
+Signature
+
+Clean up comments

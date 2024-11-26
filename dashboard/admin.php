@@ -1,5 +1,5 @@
 <?php
-include_once "common/header-admin.php";
+include_once "../common/header-admin.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -14,7 +14,7 @@ include_once "common/header-admin.php";
                 <div class="row g-4 gx-5">
 
                     <div class="col-6 mb-4 d-flex justify-content-center">
-                        <a href="create-user.php" class="text-decoration-none">
+                        <a href="../create/create-user.php" class="text-decoration-none">
                             <div class="card beep text-secondary text-center shadow border-0 px-5 py-2">
                                 <div class="card-body d-flex align-items-center justify-content-center">
                                     <h5 class="mb-0">Nouvel <br> utilisateur</h5>
@@ -24,7 +24,7 @@ include_once "common/header-admin.php";
                     </div>
 
                     <div class="col-6 mb-4 d-flex justify-content-center">
-                        <a href="create-class.php" class="text-decoration-none">
+                        <a href="../create/create-class.php" class="text-decoration-none">
                             <div class="card beep text-secondary text-center shadow border-0 px-5 py-2">
                                 <div class="card-body d-flex align-items-center justify-content-center">
                                     <h5 class="card-title mb-0">Nouvelle <br> classe</h5>
@@ -34,7 +34,7 @@ include_once "common/header-admin.php";
                     </div>
 
                     <div class="col-6 mb-4 d-flex justify-content-center">
-                        <a href="create-subject.php" class="text-decoration-none">
+                        <a href="../create/create-subject.php" class="text-decoration-none">
                             <div class="card beep text-secondary text-center shadow border-0 px-5 py-2">
                                 <div class="card-body d-flex align-items-center justify-content-center">
                                     <h5 class="card-title mb-0">Nouvelle <br> matière</h5>
@@ -44,7 +44,7 @@ include_once "common/header-admin.php";
                     </div>
 
                     <div class="col-6 mb-4 d-flex justify-content-center">
-                        <a href="create-schedule.php" class="text-decoration-none">
+                        <a href="../create/create-schedule.php" class="text-decoration-none">
                             <div class="card beep text-secondary text-center shadow border-0 px-5 py-2">
                                 <div class="card-body d-flex align-items-center justify-content-center">
                                     <h5 class="card-title mb-0">Nouveau <br> cours</h5>
@@ -60,5 +60,5 @@ include_once "common/header-admin.php";
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

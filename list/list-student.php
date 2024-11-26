@@ -1,9 +1,9 @@
 <?php 
-include_once "common/header-admin.php";
-include_once "database/db-connexion.php";
-include_once "database/db-update-student.php";
-include_once "database/db-delete-student.php";
-include_once "database/db-list-display.php";
+include_once "../common/header-admin.php";
+include_once "../database/db-connexion.php";
+include_once "../database/update/db-update-student.php";
+include_once "../database/delete/db-delete-student.php";
+include_once "../database/db-list-display.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -47,9 +47,9 @@ include_once "database/db-list-display.php";
                                                 <select class="form-control custom-select form-select" id="class_id" name="class_id">
                                                     <option value="<?php echo htmlspecialchars($student['class_id']); ?>"><?php echo $student['class_name']; ?></option>
                                                     <?php foreach($classes as $class): ?>
-                                                    <option value=<?php echo($class["id"]); ?>> 
-                                                        <?php  echo($class["name"]); ?> 
-                                                    </option>
+                                                        <option value=<?php echo($class["id"]); ?>> 
+                                                            <?php  echo($class["name"]); ?> 
+                                                        </option>
                                                     <?php endforeach; ?>
                                                 </select> 
                                             </td>
@@ -80,5 +80,5 @@ include_once "database/db-list-display.php";
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

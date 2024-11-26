@@ -1,9 +1,9 @@
 <?php 
-include_once "common/header-admin.php";
-include_once "database/db-connexion.php";
-include_once "database/db-update-subject.php";
-include_once "database/db-delete-subject.php";
-include_once "database/db-list-display.php";
+include_once "../common/header-admin.php";
+include_once "../database/db-connexion.php";
+include_once "../database/update/db-update-subject.php";
+include_once "../database/delete/db-delete-subject.php";
+include_once "../database/db-list-display.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -58,5 +58,5 @@ include_once "database/db-list-display.php";
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>

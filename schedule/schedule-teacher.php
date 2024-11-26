@@ -1,5 +1,5 @@
 <?php 
-include_once "common/header-student.php";
+include_once "../common/header-teacher.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -28,35 +28,35 @@ include_once "common/header-student.php";
                             <tbody>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">08:00 - 09:00</th>
-                                    <td class="text-center">Matière 1</td>
-                                    <td class="text-center">Matière 1</td>
-                                    <td class="text-center">Matière 1</td>
-                                    <td class="text-center">Matière 1</td>
-                                    <td class="text-center">Matière 1</td>
+                                    <td class="text-center">Classe 1</td>
+                                    <td class="text-center">Classe 1</td>
+                                    <td class="text-center">Classe 1</td>
+                                    <td class="text-center">Classe 1</td>
+                                    <td class="text-center">Classe 1</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">09:00 - 10:00</th>
-                                    <td class="text-center">Matière 2</td>
-                                    <td class="text-center">Matière 2</td>
-                                    <td class="text-center">Matière 2</td>
-                                    <td class="text-center">Matière 2</td>
-                                    <td class="text-center">Matière 2</td>
+                                    <td class="text-center">Classe 2</td>
+                                    <td class="text-center">Classe 2</td>
+                                    <td class="text-center">Classe 2</td>
+                                    <td class="text-center">Classe 2</td>
+                                    <td class="text-center">Classe 2</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">10:00 - 11:00</th>
-                                    <td class="text-center">Matière 3</td>
-                                    <td class="text-center">Matière 3</td>
-                                    <td class="text-center">Matière 3</td>
-                                    <td class="text-center">Matière 3</td>
-                                    <td class="text-center">Matière 3</td>
+                                    <td class="text-center">Classe 3</td>
+                                    <td class="text-center">Classe 3</td>
+                                    <td class="text-center">Classe 3</td>
+                                    <td class="text-center">Classe 3</td>
+                                    <td class="text-center">Classe 3</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">11:00 - 12:00</th>
-                                    <td class="text-center">Matière 4</td>
-                                    <td class="text-center">Matière 4</td>
-                                    <td class="text-center">Matière 4</td>
-                                    <td class="text-center">Matière 4</td>
-                                    <td class="text-center">Matière 4</td>
+                                    <td class="text-center">Classe 4</td>
+                                    <td class="text-center">Classe 4</td>
+                                    <td class="text-center">Classe 4</td>
+                                    <td class="text-center">Classe 4</td>
+                                    <td class="text-center">Classe 4</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">12:00 - 13:00</th>
@@ -68,43 +68,43 @@ include_once "common/header-student.php";
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">13:00 - 14:00</th>
-                                    <td class="text-center">Matière 5</td>
-                                    <td class="text-center">Matière 5</td>
-                                    <td class="text-center">Matière 5</td>
-                                    <td class="text-center">Matière 5</td>
-                                    <td class="text-center">Matière 5</td>
+                                    <td class="text-center">Classe 5</td>
+                                    <td class="text-center">Classe 5</td>
+                                    <td class="text-center">Classe 5</td>
+                                    <td class="text-center">Classe 5</td>
+                                    <td class="text-center">Classe 5</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">14:00 - 15:00</th>
-                                    <td class="text-center">Matière 6</td>
-                                    <td class="text-center">Matière 6</td>
-                                    <td class="text-center">Matière 6</td>
-                                    <td class="text-center">Matière 6</td>
-                                    <td class="text-center">Matière 6</td>
+                                    <td class="text-center">Classe 6</td>
+                                    <td class="text-center">Classe 6</td>
+                                    <td class="text-center">Classe 6</td>
+                                    <td class="text-center">Classe 6</td>
+                                    <td class="text-center">Classe 6</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">15:00 - 16:00</th>
-                                    <td class="text-center">Matière 7</td>
-                                    <td class="text-center">Matière 7</td>
-                                    <td class="text-center">Matière 7</td>
-                                    <td class="text-center">Matière 7</td>
-                                    <td class="text-center">Matière 7</td>
+                                    <td class="text-center">Classe 7</td>
+                                    <td class="text-center">Classe 7</td>
+                                    <td class="text-center">Classe 7</td>
+                                    <td class="text-center">Classe 7</td>
+                                    <td class="text-center">Classe 7</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">16:00 - 17:00</th>
-                                    <td class="text-center">Matière 8</td>
-                                    <td class="text-center">Matière 8</td>
-                                    <td class="text-center">Matière 8</td>
-                                    <td class="text-center">Matière 8</td>
-                                    <td class="text-center">Matière 8</td>
+                                    <td class="text-center">Classe 8</td>
+                                    <td class="text-center">Classe 8</td>
+                                    <td class="text-center">Classe 8</td>
+                                    <td class="text-center">Classe 8</td>
+                                    <td class="text-center">Classe 8</td>
                                 </tr>
                                 <tr>
                                     <th scope="row" class="text-center fw-bold">17:00 - 18:00</th>
-                                    <td class="text-center">Matière 9</td>
-                                    <td class="text-center">Matière 9</td>
-                                    <td class="text-center">Matière 9</td>
-                                    <td class="text-center">Matière 9</td>
-                                    <td class="text-center">Matière 9</td>
+                                    <td class="text-center">Classe 9</td>
+                                    <td class="text-center">Classe 9</td>
+                                    <td class="text-center">Classe 9</td>
+                                    <td class="text-center">Classe 9</td>
+                                    <td class="text-center">Classe 9</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -116,5 +116,5 @@ include_once "common/header-student.php";
 </main>
 
 <?php 
-include_once "common/footer.php";
+include_once "../common/footer.php";
 ?>
