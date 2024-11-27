@@ -14,8 +14,6 @@ if(count($_POST) > 0) {
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-
-    // Execute the statement
     $stmt->execute();
 }
 

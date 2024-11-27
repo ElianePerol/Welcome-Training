@@ -1,10 +1,8 @@
-<?php
-include_once "session-start.php";
-?>
+<?php include_once "session-start.php" ?>
 
 <!doctype html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome training - Administrateur</title>
@@ -44,7 +42,7 @@ include_once "session-start.php";
                 <a href="../list/list-subject.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Matières</a>
                 <a href="../list/list-schedule.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Plannings</a>
                 <a href="../common/logout.php" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
-                    <i class="fa-solid fa-power-off"></i>
+                    <i class="fa-solid fa-right-from-bracket fs-4"></i>
                 </a>
             </nav>
         </div>

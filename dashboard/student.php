@@ -1,5 +1,8 @@
 <?php 
-include_once "../common/header-student.php";
+include_once "../common/header-teacher.php";
+include_once "../common/footer.php";
+// Don't know why this works, but the include_at the bottom of the page
+include_once "../database/attendance/sign-attendance.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
@@ -8,54 +11,38 @@ include_once "../common/header-student.php";
 
       <!-- Emploi du temps de la journée -->
       <div class="card align-self-start bg-white border-0 shadow col-md-4 p-0">
+        
         <div class="schedule-header rounded-top p-1">
           <h5 class="mb-2 text-center text-white">Emploi du temps</h5>
         </div>
+        
         <div class="table-responsive rounded-bottom">
-            <table class="table table-bordered mb-0">
-                <tbody>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">08:00 - 09:00</th>
-                        <td class="text-center">Matière 1</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">09:00 - 10:00</th>
-                        <td class="text-center">Matière 2</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">10:00 - 11:00</th>
-                        <td class="text-center">Matière 3</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">11:00 - 12:00</th>
-                        <td class="text-center">Matière 4</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">12:00 - 13:00</th>
-                        <td class="text-center">Pause</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">13:00 - 14:00</th>
-                        <td class="text-center">Matière 5</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">14:00 - 15:00</th>
-                        <td class="text-center">Matière 6</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">15:00 - 16:00</th>
-                        <td class="text-center">Matière 7</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">16:00 - 17:00</th>
-                        <td class="text-center">Matière 8</td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="text-center fw-bold">17:00 - 18:00</th>
-                        <td class="text-center">Matière 9</td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="table table-bordered mb-0">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center fw-bold">Heure</th>
+                <th scope="col" class="text-center fw-bold">Matière</th>
+                <th scope="col" class="text-center fw-bold">Enseignant</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php if ($no_class_today): ?>
+                <tr>
+                    <td colspan="3" class="text-center text-secondary">
+                        Pas de cours aujourd'hui
+                    </td>
+                </tr>
+              <?php else: ?>
+                <?php foreach ($schedules as $schedule): ?>
+                  <tr>
+                    <td class="text-center"><?= (new DateTime($schedule['start_datetime']))->format('H:i') . ' - ' . (new DateTime($schedule['end_datetime']))->format('H:i') ?></td>
+                    <td class="text-center"><?= $schedule['subject_name'] ?></td>
+                    <td class="text-center"><?= $schedule['teacher_name'] ?></td>
+                  </tr>
+                <?php endforeach; ?>
+              <?php endif; ?>
+            </tbody>
+          </table>
         </div>
       </div>
 
@@ -64,15 +51,36 @@ include_once "../common/header-student.php";
         <div class="schedule-header rounded-top p-1 mb-2">
           <h5 class="mb-2 text-center text-white">Signature</h5>
         </div>
-        <div class="d-flex justify-content-center">
-          <p>Cours - Horaire</p>
-        </div>
-        <div class="m-2 mb-4 mw-75">
-          <textarea class="form-control" rows="3"></textarea>
-        </div>
-        <div class="d-flex justify-content-center mb-3">
-          <button type="submit" class="btn rounded-pill w-25">Valider</button>
-        </div>
+        
+        <!-- Display the subject, teacher name, and schedule times for which the signature is required -->
+        <?php if (!$no_class_today && isset($schedules[0])): ?>
+          <div class="d-flex flex-column align-items-center p-3">
+            <p class="text-secondary mb-1"><strong>Date :</strong> <?= date('d/m/Y') ?></p>
+            <p class="text-secondary mb-1"><strong>Horaire :</strong> 
+              <?= (new DateTime($schedules[0]['start_datetime']))->format('H:i') . ' - ' . (new DateTime($schedules[0]['end_datetime']))->format('H:i') ?>
+            </p>
+            <p class="text-secondary mb-1"><strong>Matière :</strong> <?= $schedules[0]['subject_name'] ?></p>
+            <p class="text-secondary mb-4"><strong>Enseignant :</strong> <?= $schedules[0]['teacher_name'] ?></p>
+            
+            <!-- Check if the student has already signed for this schedule -->
+            <?php if ($is_signed): ?>
+              <!-- Display "Présence confirmée" if signed -->
+              <p class="text-success"><strong>Présence confirmée</strong></p>
+            <?php else: ?>
+              <!-- Show the Sign button if not signed -->
+              <form action="" method="POST">
+                <input type="hidden" name="schedule_id" value="<?= $schedules[0]['schedule_id'] ?>" />
+                <button type="submit" name="sign" class="btn rounded-pill">Signer</button>
+              </form>
+            <?php endif; ?>
+          </div>
+
+
+          <?php else: ?>
+            <div class="d-flex justify-content-center">
+              <p>Aucune signature nécessaire aujourd'hui.</p>
+            </div>
+          <?php endif; ?>
       </div>
 
     </div>

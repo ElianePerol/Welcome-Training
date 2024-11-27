@@ -35,6 +35,25 @@ include_once "../database/db-list-display.php";
                                     <tr>
                                         <form action="" method="POST">
 
+                                            <!-- Date -->
+                                            <td class="text-center">
+                                                <input type="date" class="form-control" name="start_date" 
+                                                    value="<?php echo date('Y-m-d', strtotime($schedule['start_datetime'])); ?>">
+                                            </td>
+    
+                                            <!-- Heure début -->
+                                            <td class="text-center">
+                                                <input type="time" class="form-control" name="start_time" 
+                                                    value="<?php echo date('H:i', strtotime($schedule['start_datetime'])); ?>">
+                                            </td>
+    
+                                            <!-- Heure fin -->
+                                            <td class="text-center">
+                                                <input type="time" class="form-control" name="end_time" 
+                                                    value="<?php echo date('H:i', strtotime($schedule['end_datetime'])); ?>">
+                                            </td>
+                                            
+                                            <!-- Classe -->
                                             <td class="text-center">
                                                 <select class="form-control custom-select form-select" id="class_id" name="class_id">
                                                     <option value="<?php echo ($schedule['class_id']); ?>"><?php echo $schedule['class_name']; ?></option>
@@ -46,6 +65,7 @@ include_once "../database/db-list-display.php";
                                                 </select> 
                                             </td>
 
+                                            <!-- Matière -->
                                             <td class="text-center">
                                                 <select class="form-control custom-select form-select" id="subject_id" name="subject_id">
                                                     <option value="<?php echo ($schedule['subject_id']); ?>"><?php echo $schedule['subject_name']; ?></option>
@@ -57,6 +77,7 @@ include_once "../database/db-list-display.php";
                                                 </select>
                                             </td>
 
+                                            <!-- Enseignant -->
                                             <td class="text-center">
                                                 <select class="form-control custom-select form-select" id="teacher_id" name="teacher_id">
                                                     <option value="<?php echo ($schedule['teacher_id']); ?>">
@@ -69,22 +90,9 @@ include_once "../database/db-list-display.php";
                                                         </option>
                                                     <?php endforeach; ?>
                                                 </select>
-
-                                            <td class="text-center">
-                                                <input type="date" class="form-control" name="start_date" 
-                                                    value="<?php echo date('Y-m-d', strtotime($schedule['start_datetime'])); ?>">
                                             </td>
 
-                                            <td class="text-center">
-                                                <input type="time" class="form-control" name="start_time" 
-                                                    value="<?php echo date('H:i', strtotime($schedule['start_datetime'])); ?>">
-                                            </td>
-
-                                            <td class="text-center">
-                                                <input type="time" class="form-control" name="end_time" 
-                                                    value="<?php echo date('H:i', strtotime($schedule['end_datetime'])); ?>">
-                                            </td>
-
+                                            <!-- Actions -->
                                             <td class="text-center">
                                                 <div class="d-flex justify-content-center">
                                                     <button type="submit" name="update-schedule" value="<?php echo $schedule['id']; ?>" class="btn btn-sm me-2"

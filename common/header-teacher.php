@@ -2,7 +2,7 @@
 
 <!doctype html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Welcome training - Enseignant</title>
@@ -16,7 +16,7 @@
         <div class="d-flex justify-content-between align-items-center">
 
             <div class="d-flex align-items-center gap-3">
-                <img src="assets/img/logo_dark.png" class="img-fluid logo-dark rounded-circle" alt="Logo Welcome Training">
+                <img src="../assets/img/logo_dark.png" class="img-fluid logo-dark rounded-circle" alt="Logo Welcome Training">
                 
                 <!-- Displays user's name -->
                 <h5 class="mb-0 text-white">
@@ -35,11 +35,11 @@
             </div>
 
             <nav class="d-flex align-items-center gap-3">
-                <a href="teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Accueil</a>
-                <a href="schedule-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Emploi du temps</a>
-                <a href="list-class-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
+                <a href="../dashboard/teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Accueil</a>
+                <a href="../schedule/schedule-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Emploi du temps</a>
+                <a href="../list/list-class-teacher.php" class="nav-link bg-light border-0 fw-bold rounded-pill px-3 py-1">Classes</a>
                 <a href="../common/logout.php" class="text-white" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Déconnexion">
-                    <i class="fa-solid fa-power-off"></i>
+                    <i class="fa-solid fa-right-from-bracket fs-4"></i>
                 </a>
             </nav>
         </div>
