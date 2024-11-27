@@ -1,13 +1,22 @@
 Passer on OOP
 
-Ranger les fichiers dans les répertoires appropriés
+Display bugs : 
+    main overlapping header and footer, when tables too high, messes up scroll (check student list on admin dashboard)
+    "appel" card div doesn't shrink after submitting the mark-attendance form
+
+On student dashboard :
+    only first class of the day shows under signature
+    signature button appears even when teacher hasn't ticked attendance checkbox
+
+Add a display of the attendance :
+    Admin dashboard : per class, per day, per schedule : list of absent student
+    Teacher dashboard : same
+    Student : list of day/schedule
 
 Vérifier à la création d'un cours que la classe et le prof sont dispo sur ce créneau horaire
 
 Gérer erreur de mdp au login
 
 Page script_bdd.sql qui créer bdd (à exporter dans l'existante et remettre propre)
-
-Signature
 
 Clean up comments

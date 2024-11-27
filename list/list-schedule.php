@@ -20,12 +20,12 @@ include_once "../database/db-list-display.php";
                         <table class="table table-bordered mb-0">
                             <thead class="bg-primary text-white">
                                 <tr>
-                                    <th scope="col" class="text-center">Classe</th>
-                                    <th scope="col" class="text-center">Matière</th>
-                                    <th scope="col" class="text-center">Enseignant</th>
                                     <th scope="col" class="text-center">Date</th>
                                     <th scope="col" class="text-center">Heure de début</th>
                                     <th scope="col" class="text-center">Heure de fin</th>
+                                    <th scope="col" class="text-center">Classe</th>
+                                    <th scope="col" class="text-center">Matière</th>
+                                    <th scope="col" class="text-center">Enseignant</th>
                                     <th scope="col" class="text-center">Actions</th>
                                 </tr>
                             </thead>

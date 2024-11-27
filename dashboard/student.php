@@ -1,5 +1,5 @@
 <?php 
-include_once "../common/header-teacher.php";
+include_once "../common/header-student.php";
 include_once "../common/footer.php";
 // Don't know why this works, but the include_at the bottom of the page
 include_once "../database/attendance/sign-attendance.php";
