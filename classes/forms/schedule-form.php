@@ -1,6 +1,6 @@
 <?php
 
-class FormulaireCours {
+class ScheduleForm {
     
     public $subject_id;
     public $class_id;
@@ -12,33 +12,25 @@ class FormulaireCours {
     private $time;
     private $length;
 
-    public function __construct()
-    {
-        $this->recuperationDuFormulaire();
-        $this->definieLaDuree();
-        $this->gestionDesDates();
+    public function __construct() {
+        $this->fetchForm();
+        $this->setLength();
+        $this->dateHandler();
     }
 
-    private function recuperationDuFormulaire() 
-    {
+    private function fetchForm() {
         $this->subject_id = $_POST['subject_id'];
         $this->class_id = $_POST['class_id'];
-        // manière de base
-        // if(empty($_POST['enseignant'])) {
-        //     $this->teacher_id = NULL;
-        // } else {
-        //     $this->teacher_id = $_POST['enseignant'];
-        // }
         $this->teacher_id = empty($_POST['enseignant']) ? NULL : $_POST['enseignant'];
         $this->date = $_POST['date'];
         $this->time = $_POST['time'];
     }
 
-    private function definieLaDuree() {
+    private function setLength() {
         $this->length = isset($_POST['duree']) ? (int)$_POST['duree'] : 0;
     }
 
-    private function gestionDesDates() {
+    private function dateHandler() {
         // Combines date and time to form start_datetime using DateTime
         $start_datetime = new DateTime("$this->date $this->time");
 

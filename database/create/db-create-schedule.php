@@ -56,18 +56,18 @@
 
 // }
 
-include_once "../classes/formulaire-cours.php";
-include_once "../classes/formulaire-creation-cours.php";
+include_once "../classes/forms/schedule-form.php";
+include_once "../classes/forms/create-schedule-form-handler.php";
 
 // crÃ©ation de l'objet pour s'en servir
-$formulaireCreationCours = new FormulaireCreationCours($pdo);
+$schedule_form = new CreateScheduleFormHandler($pdo);
 
-$sujets = $formulaireCreationCours->recuperationDesSujets();
-$enseignants = $formulaireCreationCours->recuperationDesProfs();
+$sujets = $schedule_form->fetchSubject();
+$enseignants = $schedule_form->fetchTeacher();
 
 // Saves the create-schedule form inputs in the db
 if(count($_POST) > 0) {
-    $formulaireCreationCours->gestionFormulaire();
+    $schedule_form->formHandler();
 }
 
 ?>

@@ -2,7 +2,7 @@
 include_once "../common/header-teacher.php";
 include_once "../common/footer.php";
 // Don't know why this works, but the include_at the bottom of the page
-include_once "../database/attendance/mark-attendance.php";
+include_once "../database/attendance/db-mark-attendance.php";
 ?>
 
 <main class="bg-light d-flex align-items-center vh-100">
